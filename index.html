@@ -1,51 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>SKARK. Final Project</title>
-</head>
-<body>
-<style> .bold {font-weight:bold;} </style>
+<!DOCTYPE html5>
+<html>
+	<head>
+		<title>SKARK. Final Project</title>
+		<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+		<style>
+			body {
+				margin:0;
+				overflow:hidden;
+			}
+			#wrapper {
+				width:100%;
+				height:100%;
+				overflow:hidden;
+			}
+			
+			/* each page panel */
+			.item {
+				position: relative;
+				padding: 20px;
+				display:block;
+				text-align: center;
+				background-color: #e4e5e7;
+			}
+			#intro {
+				background-color: #4cd2da;
+			}
+			#members, #membersLink {
+				background-color: white;
+			}
+			#about, #aboutLink {
+				background-color: #ff943d;
+			}
+			#launch, #launchLink {
+				background-color: #e4e5e7;
+			}
+			
+			/* style for the toggle link */
+			.bottom {
+				width: 100%;
+				position: absolute;
+				bottom: 0px;
+			}
+			.toggle {
+				padding: 10px 25px;
+			}
+		</style>
+		<script>
+		
+$(document).ready(function() {
+	// resize the .item div to the viewport width/height
+	width = $(window).width();
+	height = $(window).height() - 45;
+	
+	$('.item').css({width: width, height: height});
+	
+	$('a.toggle').click(function () {
+		// when toggle is clicked, slide to the link element's position
+		$('a.toggle').removeClass('selected');
+		$(this).addClass('selected');
+		current = $(this);
+		$('#wrapper').scrollTo($(this).attr('href'), 800);		
+		
+		return false;
+	});
+	
+	$(window).resize(function () {
+		resizePanel();
+	});
+});
 
-<article>
-<h3>Slava </h3>
-  <p><a class="bold">Wireframes<a> - Ideas of mockups & drawing, electronic wireframe template </p>
-	<p><a class="bold">Intro pages<a> - Intro Page CSS </p>
-	<p><a class="bold">Homepage<a> - CSS, HTML & overall page ownership </p>
-	<p><a class="bold">Other<a> - Main website frame (banner, background, navigation), CSS guidelines, color palette </p>
-</article>
+function resizePanel() {
+	// resize the .item div to the viewport width/height
+	width = $(window).width();
+	height = $(window).height() - 45;
+			
+	$('.item').css({width: width, height: height});
+	
+	// goto the proper selected div
+	$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+}
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="intro" class="item">
+				<!-- Insert page 1 content here -->
+				<h1>Our Team is called "Superman"</h1>
+				<h1>And this is our Final Project.</h1>
+				<h1>Our Team consists of 5 people.</h1>
+				<br/>
+				<h1>Meet!</h1>
+				
+				<!-- toggle button to slide up -->
+				<div class="bottom">
+					<a href="#members" id="membersLink" class="toggle">Members</a>
+				</div>
+			</div>
+			
+			<div id="members" class="item">
+				<!-- Insert page 2 content here -->
+				<h1>Viacheslav Ivanev</h1>
+				<h1>Kevin</h1>
+				<h1>Richard</h1>
+				<h1>Kim Mackay</h1>
+				<h1>Amber Terry</h1>
+				
+				<!-- toggle button to slide up -->
+				<div class="bottom">
+					<a href="#about" id="aboutLink" class="toggle">About</a>
+				</div>
+			</div>
+			
+			<div id="about" class="item">
+				<!-- Insert page 3 content here -->
+				<h1>About this project</h1>
+				
+				<!-- toggle button to slide up -->
+				<div class="bottom">
+					<a href="#launch" id="launchLink" class="toggle">Launch</a>
+				</div>
+			</div>
+			
+			<div id="launch" class="item">
+				<!-- Insert page 4 content here -->
+				<h1>Check out our website!</h1>
+			</div>
+			
+			<div class="item"></div>
 
-<article>
-<h3>Kevin</h3>
-	<p><a class="bold">Wireframes<a> - Ideas of mockups & drawing </p>
-	<p><a class="bold">Blog<a> - CSS, HTML, content creation & overall page ownership </p>
-</article>
+		</div>
 
-<article>
-<h3>Amber</h3>
-	<p><a class="bold">Wireframes<a> - Ideas of mockups & drawing </p>
-	<p><a class="bold">Intro pages<a> - Intro Page CSS, HTML & overall page ownership </p>
-	<p><a class="bold">Other<a> - CSS guidelines, color palette </p>
-</article>
-
-<article>
-<h3>Richard</h3>
-	<p><a class="bold">Wireframes<a> - Ideas of mockups & drawing </p>
-	<p><a class="bold">Intro pages<a> - Javascript </p>
-	<p><a class="bold">Lectures page<a> - CSS, HTML & overall page ownership </p>
-	<p><a class="bold">Site Map<a> - CSS, HTML & overall page ownership </p>
-</article>
-
-<article>
-<h3>Kim</h3>
-	<p><a class="bold">Wireframes<a> - Ideas of mockups & drawing, drawn wireframe with descriptions </p>
-	<p><a class="bold">Intro pages<a> - Intro Page content & HTML </p>
-	<p><a class="bold">Rational<a> - CSS, HTML & overall page ownership </p>
-	<p><a class="bold">Project manager <a> - Overall timing, cohesiveness & submission </p>
-</article>
-
-
-
-
-</body>
+	</body>
 </html>
