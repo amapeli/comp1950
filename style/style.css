@@ -1,0 +1,245 @@
+body {
+	margin:0;
+	overflow:hidden;
+	background-color: #eee;
+	color: #fff;
+	font-family: arial, sans-serif;
+}
+
+#wrapper {
+	max-width: 100%;
+	height:100%;
+	overflow:hidden;
+}
+
+/* each page panel */
+.item {
+	position: relative;
+	overflow: hidden;
+}
+/* the content of each page panel */
+.content {
+	overflow: auto;
+	height: 100%;
+}
+/* BLURB - Intro section */
+#blurb  .content {
+	text-align: center;
+	line-height: .75em;
+	padding: 75px 0 0;
+	
+	/* two toned background */
+	height: 100%;
+	background: #4cd2d9; /* Old browsers */
+	
+	background: -moz-linear-gradient(45deg,  #4cd2d9 0%, #4cd2d9 50%, #5adae0 50%, #5adae0 100%); /* FF3.6+ */
+	
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#4cd2d9), color-stop(50%,#4cd2d9), color-stop(50%,#5adae0), color-stop(100%,#5adae0)); /* Chrome,Safari4+ */
+	
+	background: -webkit-linear-gradient(45deg,  #4cd2d9 0%,#4cd2d9 50%,#5adae0 50%,#5adae0 100%); /* Chrome10+,Safari5.1+ */
+	
+	background: -o-linear-gradient(45deg,  #4cd2d9 0%,#4cd2d9 50%,#5adae0 50%,#5adae0 100%); /* Opera 11.10+ */
+	
+	background: -ms-linear-gradient(45deg,  #4cd2d9 0%,#4cd2d9 50%,#5adae0 50%,#5adae0 100%); /* IE10+ */
+
+	background: linear-gradient(45deg,  #4cd2d9 0%,#4cd2d9 50%,#5adae0 50%,#5adae0 100%); /* W3C */
+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4cd2d9', endColorstr='#5adae0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#blurb h1 {
+	color: #fff;
+	padding-bottom: 20px;
+}
+#blurb h2 {
+	color: #fff;
+	font-weight: bold;
+	padding-bottom: 50px;
+}
+
+/* About the team */
+
+#team .content {
+	background-color: #fff;
+	color: #515151;
+	padding: 50px 0 0;
+	text-align: center;
+}
+#team strong {
+	color: #ff913d;
+}
+#team #figures {
+	width: 960px;
+	margin: auto;
+}
+#team figure {
+	float: left;
+}
+#team figure > img {
+	border:1px solid #;
+	/* circle border around bio imgs */
+		-webkit-border-radius: 75px;
+		-moz-border-radius: 75px;
+		border-radius: 75px;
+}
+figcaption  {
+	width: 110px;
+	font-size: .75em;
+	line-height: .90em;
+	text-align: center;
+}
+
+/* Description of project*/
+#project .content{
+	padding: 30px 0px 0;
+	
+	/* two toned background */
+	background: #ff913d; /* Old browsers */
+	
+	background: -moz-linear-gradient(45deg,  #ff913d 0%, #ff913d 50%, #ff984a 50%, #ff984a 100%); /* FF3.6+ */
+	
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ff913d), color-stop(50%,#ff913d), color-stop(50%,#ff984a), color-stop(100%,#ff984a)); /* Chrome,Safari4+ */
+	
+	background: -webkit-linear-gradient(45deg,  #ff913d 0%,#ff913d 50%,#ff984a 50%,#ff984a 100%); /* Chrome10+,Safari5.1+ */
+	
+	background: -o-linear-gradient(45deg,  #ff913d 0%,#ff913d 50%,#ff984a 50%,#ff984a 100%); /* Opera 11.10+ */
+	
+	background: -ms-linear-gradient(45deg,  #ff913d 0%,#ff913d 50%,#ff984a 50%,#ff984a 100%); /* IE10+ */
+
+	background: linear-gradient(45deg,  #ff913d 0%,#ff913d 50%,#ff984a 50%,#ff984a 100%); /* W3C */
+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff913d', endColorstr='#ff984a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#project h1 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+#project p {
+	color: #fff;
+	text-align: left;
+}
+
+ol  > li{
+	padding-top: 10px;
+	font-size: 1.25em;
+}
+	
+
+
+#visit  .content {
+	background-color: #e3e4e6;
+	color: #515151;
+	padding: 50px 10px 50px;
+	text-align: center;
+}
+/* blue visit site button */
+#bluebutton a:link {
+	width: 245px;
+	background-color: #5adae0;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+	padding: 15px;
+	text-decoration: none;
+	margin: auto;
+	font-weight: bold;
+}
+#bluebutton a:visited {
+	width: 245px;
+	background-color: #5adae0;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	margin: auto;
+	font-weight: bold;
+}
+#bluebutton a:hover {
+	width: 245px;
+	background-color: #61d4d4;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	margin: auto;
+	font-weight: bold;
+}
+#bluebutton  a:active {
+	width: 245px;
+	background-color: #5adae0;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	margin: auto;
+	font-weight: bold;
+}
+/* visit site button 2 */
+#graybutton a:link {
+	width: 245px;
+	background-color: #515151;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+	padding: 15px;
+	text-decoration: none;
+	margin: auto;
+	font-weight: bold;
+}
+#graybutton a:visited {
+	width: 245px;
+	background-color: #515151;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	margin: auto;
+	font-weight: bold;
+}
+#graybutton a:hover {
+	width: 245px;
+	background-color: #424242;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	margin: auto;
+	font-weight: bold;
+}
+#graybutton a:active {
+	width: 245px;
+	background-color: #515151;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	margin: auto;
+	font-weight: bold;
+}
+
+.button {
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+}
+.clear {
+	clear: both;
+}

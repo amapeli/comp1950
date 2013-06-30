@@ -1,130 +1,171 @@
 <!DOCTYPE html5>
 <html>
 	<head>
-		<title>SKARK. Final Project</title>
+		<title>Welcome to SKARK</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
 		<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
 		<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-		<style>
-			body {
-				margin:0;
-				overflow:hidden;
-			}
-			#wrapper {
-				width:100%;
-				height:100%;
-				overflow:hidden;
-			}
-			
-			/* each page panel */
-			.item {
-				position: relative;
-				padding: 20px;
-				display:block;
-				text-align: center;
-				background-color: #e4e5e7;
-			}
-			#intro {
-				background-color: #4cd2da;
-			}
-			#members, #membersLink {
-				background-color: white;
-			}
-			#about, #aboutLink {
-				background-color: #ff943d;
-			}
-			#launch, #launchLink {
-				background-color: #e4e5e7;
-			}
-			
-			/* style for the toggle link */
-			.bottom {
-				width: 100%;
-				position: absolute;
-				bottom: 0px;
-			}
-			.toggle {
-				padding: 10px 25px;
-			}
-		</style>
 		<script>
+		<!-- Functionality for sliding panels
+			$(document).ready(function() {
+				// resize the .item div to the viewport width/height
+				height = $(window).height();
+	
+				$('.item').css({height: height});
+				
+				$('a.toggle').click(function () {
+					// when toggle is clicked, slide to the link element's position
+					$('a.toggle').removeClass('selected');
+					$(this).addClass('selected');
+					current = $(this);
+					$('#wrapper').scrollTo($(this).attr('href'), 800);		
 		
-$(document).ready(function() {
-	// resize the .item div to the viewport width/height
-	width = $(window).width();
-	height = $(window).height() - 45;
+					return false;
+				});
 	
-	$('.item').css({width: width, height: height});
-	
-	$('a.toggle').click(function () {
-		// when toggle is clicked, slide to the link element's position
-		$('a.toggle').removeClass('selected');
-		$(this).addClass('selected');
-		current = $(this);
-		$('#wrapper').scrollTo($(this).attr('href'), 800);		
-		
-		return false;
-	});
-	
-	$(window).resize(function () {
-		resizePanel();
-	});
-});
+				$(window).resize(function () {
+					resizePanel();
+				});
+			});
 
-function resizePanel() {
-	// resize the .item div to the viewport width/height
-	width = $(window).width();
-	height = $(window).height() - 45;
-			
-	$('.item').css({width: width, height: height});
+			function resizePanel() {
+				// resize the .item div to the viewport width/height
+				height = $(window).height();
 	
-	// goto the proper selected div
-	$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
-}
+				$('.item').css({height: height});
+	
+				// goto the proper selected div
+				$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+			}
+		//-->
 		</script>
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="intro" class="item">
+			<div id="blurb" class="item">
 				<!-- Insert page 1 content here -->
-				<h1>Our Team is called "Superman"</h1>
-				<h1>And this is our Final Project.</h1>
-				<h1>Our Team consists of 5 people.</h1>
-				<br/>
-				<h1>Meet!</h1>
+				<div class="content">
+					<h1>
+					<p>Our team is called "SKARK".</p>
+					<p>This is our final project.</p>
+					<p>Our group consists of 5 people.</p>
+					</h1>
+
+<h2>Meet the team!</h2>
+				</div>
 				
 				<!-- toggle button to slide up -->
-				<div class="bottom">
-					<a href="#members" id="membersLink" class="toggle">Members</a>
+				<div class="button" id="teamLink">
+					<a href="#team" class="toggle"><img src="img/button1.png"></a>
 				</div>
 			</div>
 			
-			<div id="members" class="item">
+			<div id="team" class="item">
 				<!-- Insert page 2 content here -->
-				<h1>Viacheslav Ivanev</h1>
-				<h1>Kevin</h1>
-				<h1>Richard</h1>
-				<h1>Kim Mackay</h1>
-				<h1>Amber Terry</h1>
+				<div class="content">
+					<img src="img/mng.png">
+
+					<div id="figures">
+
+					<figure>
+					<img src="img/slav.jpg">
+					<figcaption>
+					<p><strong>Viacheslav Ivanov</strong></p>
+					<p>qa engineer, web/mobile developer & that guy with moustache</p>
+					</figcaption>
+					</figure>
+
+					<figure>
+					<img src="img/kevin.jpg">
+					<figcaption>
+					<p><strong>Kevin Wilde</strong></p>
+					<p>web developer</p>
+					</figcaption>
+					</figure>
+
+					<figure>
+					<img src="img/richard.jpg">
+					<figcaption>
+					<p><strong>Richard Chang</strong></p>
+					<p>web software/ASP.net developer</p>
+					</figcaption>
+					</figure>
+
+					<figure>
+					<img src="img/kim.jpg">
+					<figcaption>
+					<p><strong>Kim Mackay</strong></p>
+					<p>web deveveloper</p>
+					</figcaption>
+					</figure>
+
+					<figure>
+					<img src="img/amber.jpg">
+					<figcaption>
+					<p><strong>Amber Terry</strong></p>
+					<p>web developer, blogger.</p>
+					</figcaption>
+					</figure>
+					<br class="clear"/>
+					</div>
+				</div>
 				
 				<!-- toggle button to slide up -->
-				<div class="bottom">
-					<a href="#about" id="aboutLink" class="toggle">About</a>
+				<div class="button" id="projectLink">
+					<a href="#project" class="toggle"><img src="img/button2.png"></a>
 				</div>
 			</div>
 			
-			<div id="about" class="item">
+			<div id="project" class="item">
 				<!-- Insert page 3 content here -->
-				<h1>About this project</h1>
+				<div class="content">
+<h1>The aim of this project is to redesign the current COMP 1950 with the following parameters...</h1>
+
+<ol>
+<li>To improve access to information on the website (as per students and owners recommendations):</li>
+	<ul>
+	<li>Assignment, exercises all in one easy place</li>
+	<li>Easy access to examples, references.</li>
+	<li>There is an area for latest news/updates/changes etc.</li>
+	<li>The lecture pages have lists of all subjects and a direct link to the information ie SEO Optimization, media queries.  This will reduce time searching for certain subjects.</li>
+	</ul>
+
+<li>Improve the layout style, with techniques learnt within the course:</li>
+	<ul>
+	<li>Different media queries.</li>
+	<li>HTML5 coding.</li>
+	<li>Different style sheets.</li>
+	<li>Responsive Web design.</li>
+	<li>Different style sheets imported into the CSS.</li>
+	<li>CSS Descendant, Child and Attribute Selectors.</li>
+	<li>Server Side includes.</li>
+	<li>Tumblr blog.</li>
+	<li>This design is to look modern, sleek and easy to navigate.</li>
+	</ul>
+	
+<li>The function of the website is to complement the teachings within the class:</li>
+	<ul>
+	<li>As this website is targeting current students, it is in the best interest of the lecturer time and resources to NOT concentrate on Alumni access and students, as the content is very closely related to the teachings, and may be taken out of context.  Having an alumni page, will increase the work for the tutor and would need to be constantly updated.</li>  
+	<li>The lecture notes in week order and in-class chronology.  The lecture is to be downloaded separately each week.</li>
+	</ul>
+</ol>
+				</div>
 				
 				<!-- toggle button to slide up -->
-				<div class="bottom">
-					<a href="#launch" id="launchLink" class="toggle">Launch</a>
+				<div class="button" id="visitLink">
+					<a href="#visit" class="toggle"><img src="img/button3.png"></a>
 				</div>
 			</div>
 			
-			<div id="launch" class="item">
+			<div id="visit" class="item">
 				<!-- Insert page 4 content here -->
-				<h1>Check out our website!</h1>
+				<div class="content">
+<h1>Check out the website!</h1>
+
+<p id="bluebutton"><a href="home.html">Visit the Site ></a></p>
+
+<p id="graybutton"><a href="sitemap.html">View Site Map ></a></p>
+				</div>
 			</div>
 			
 			<div class="item"></div>
