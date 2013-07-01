@@ -270,3 +270,21 @@ article h1 {
 code {
 	color: rgb(0, 102, 170);
 }
+
+.logo {
+  margin-right: 4em;
+  opacity: .7;
+  transition: opacity .5s ease-in-out;
+  font-weight: 300;
+}
+
+.logo:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.menu-subtitle {
+  display: block;
+  font-size: .7em;
+}

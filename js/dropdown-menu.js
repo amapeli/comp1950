@@ -10,8 +10,8 @@
                 vertical_class       : 'dropdown-menu-vertical',        // Class for a vertical menu
                 shadow_class         : 'dropdown-menu-shadow',          // Class for drop shadow on submenus
                 hover_class          : 'dropdown-menu-hover',           // Class applied to hovered LI's
-                open_delay           : 150,                             // Delay on menu open
-                close_delay          : 300,                             // Delay on menu close
+                open_delay           : 50,                             // Delay on menu open
+                close_delay          : 50,                             // Delay on menu close
                 animation_open       : { opacity : 'show' },            // Animation for menu open
                 speed_open           : 'fast',                          // Animation speed for menu open
                 animation_close      : { opacity : 'hide' },            // Animation for menu close

@@ -33,8 +33,6 @@
 /* Root menu item hover */
 .dropdown-menu > li:hover,
 .dropdown-menu > li.dropdown-menu-hover {
-    border-left: solid 1px #4CD2D9;
-    border-right: solid 1px #4CD2D9;
 }
 /* Submenus */
 .dropdown-menu ul {
@@ -43,7 +41,7 @@
 /* Submenu item hover */
 .dropdown-menu ul li:hover,
 .dropdown-menu ul li.dropdown-menu-hover {
-    background: #EEEEEE;
+    background: #EEE;
 }
 
 /* Optional submenu drop shadow */
