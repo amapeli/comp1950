@@ -257,10 +257,17 @@ article {
   padding: 0 0 1em 1em;
 }
 
+article:before {
+  background: #EEE;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 2em;
+}
+
 article header {
   position: relative;
   color: #707071;
-  left: -1em;
 }
 
 article h1 {
