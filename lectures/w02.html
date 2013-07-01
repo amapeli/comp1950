@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Week 2: HTML5 & SEO | SKARK</title>
+  
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../lectures/w01.html">Lectures</a></li>
+        <li><a href="http://blog1950final.tumblr.com/">Blog</a></li>
+        <li><a href="../rationale.html">Rationale</a></li>
+      </ul>
+    </nav>
+    <div class="title-block">
+      <h1>COMP 1950</h1>
+      <h2>Week 2: HTML5 & SEO</h2>
+    </div>
+  </header>
+
+  <section>
+    <article id="seobasics">
+      <header>
+        <h1>SEO Basics</h1>
+      </header>
+	  <h2>Search Engine Optimization</h2>
+	  <p>SEO ties into both semantics and standard very closely</p>
+	  <p>Long gone are the days of SEO snake oil that saw a lot of shady practices resulting in positive results</p>
+	  <p>Today, most search engine algorithms are so well developed, that the best policy: well marked up content!</p>
+	  <h2>Best Practices</h2>
+	  <p>Here are some of the best practices for proper markup and site design for optimal SEO</p>
+	  <ul>
+		<li><b>Page Titles</b> - Encapsulate each page on your site very briefly & include company info</li>
+		<li><b>Titles</b> are used in results, so be sure they are descriptive and brief</li>
+		<li><b>Meta Description</b> is used, Meta Keywords are not</li>
+		<li><b>Descriptions</b> are the content users see in many search engines. Be accurate and descriptive, but be sure to summarize the content on the page</li>
+	  </ul>
+	  <h2>Site Structure</h2>
+	  <ul>
+		<li><b>URL Structure</b> - Like the previous items, having descriptive URLs is a matter of proper site design</li>
+		<li>When URLs make sense, users (and many engines) find it easier to determine the content and the hierarchy</li>
+		<li>Use <b>actual words in URLs</b> when you can. /url?ejamcirkanfmnadcmgnskd is not very descriptive. /products/dogfood/specials is better</li>
+		<li><b>Site structure</b> plays a big part here</li>
+	  </ul>
+	  <h2>Content</h2>
+	  <p>Content within your site is one of the biggest elements that you get ranked on. Be sure it is accurate and reflects the other elements like Meta Description, Title and any headings.</p>
+	  <ul>
+		<li>Content should be easy to read and <b>on-topic</b> as much as possible</li>
+		<li>Having updated, or <b>"fresh"</b> content can improve your site: blog/news/updated info</li>
+		<li><b>Contextual linking</b> is very important! Descriptive, concise and easy to understand</li>
+		<li>Heading tags, as with other logical tags, should be used to <b>accurately describe content</b></li>
+		<li>Don't use all headings! Opposite effect can happen</li>
+	  </ul>
+	  <h2>What are your experiences?</h2>
+	  <p>SEO is a big part of building web sites today - what are your own experiences with success and/or failure?</p>
+	  <h2>Great documents on SEO</h2>
+	  <p>Google's own <a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf">Search Engine Optimization guide</a></p>
+	  <p>The <a href="http://searchengineland.com/download/seotable/SearchEngineLand-Periodic-Table-of-SEO.pdf">Periodic Table of Search Engine Optimization</a></p>
+    </article>
+
+    <article id="history">
+      <header>
+        <h1>History</h1>
+      </header>
+	  <h2>Why the need for XHTML</h2>
+	  <ul>
+		<li>First: How did we get to XHTML?
+		  <ul>
+			<li>HTML was a language created at the dawn of the Web, using SGML (Standard Generalized Markup Language) as a template</li>
+			<li>Through a flurry of iterations, HTML 1.0 moved to 4.01 fairly quickly over 5 years or so</li>
+			<li>Despite it's reputation as a loose language, HTML 4.01 can be written strict just like XHTML and HTML5 can</li>
+			<li>The problem was not with the language, nor with the authors.  It was with the <em>browsers</em>.</li>
+			<li>Browser manufacturers created User Agents that would read code, interpret it, fix any mistakes and render a page, without any visible errors.</li>
+			<li>It was this that led to coders exploiting problems in browsers and creating pages that broke when new specs or updated UAs came out</li>
+		  </ul>
+		</li>
+		<li>Okay, so now there is a problem. Millions of pages are being produced with sloppy code because the UAs let it happen</li>
+		<li>The web is becoming filled with Tag Soup that makes it hard to index, with search tools having to trust things like META keywords and descriptions</li>
+		<li>A better solution is required: Get Strict!</li>
+	  </ul>
+	  <h2>Moving on from XHTML1</h2>
+	  <ul>
+		<li>After years of <em>HTML</em> development, 4.01 became the "Last Official Release"</li>
+		<li>The Web Working Group had taken a look at XML (Extensible Markup Language) and liked what they saw: a requirement for valid markup in order for an XML application to work</li>
+		<li>Why not take the ruleset from XML (lower case attributes, everything in quotes, close every tag) and apply it to HTML? Yay!	</li>
+		<li>That should fix everything, right?</li>
+		<li>Coding wasn't <em>actually</em> fixed by the introduction of XHTML. Fixes were <em>suggested</em> by the specification, but most browsers would render the page anyway.</li>
+		<li>This is because 99% of XHTML pages are reporting their MIME type as: <code>text/html</code></li>
+		<li>To get pages to render using the appropriate DOCTYPE of XHTML, pages would have to be delivered with the MIME type of <code>application/xhtml+xml</code></li>
+		<li>Using that MIME type, however, brought with it a rather dire proviso:</li>
+		<li>The error handling specified in XHTML 1.1 meant <strong>all errors will cause the browser to cease rendering</strong></li>
+		<li>Yes, you read that correctly. That means <strong>any</strong> error will throw an warning to the user and the page will not be shown</li>
+		<li>Try to imagine the Web actually working in this way</li>
+		<li>Why was this done? Because the developers of XHTML wanted to force strict coding rules so that the Web could be seen as a giant application.  Reliable code on every page meant you could use the data anywhere</li>
+	  </ul>
+	  <h2>XHTML2</h2>
+	  <ul>
+		<li>It was that last issue and the next one that were the main tipping points for the demise of XHTML, although many of the people in the Web Working Group didn't know that yet</li>
+		<li>Between 2002 and 2006, a significant amount of development was attempted for XHTML2</li>
+		<li>An early decision was to abandon backward compatibility with XHTML1 and HTML4.x leading to significant controversy</li>
+		<li>What does that <em>mean</em>? "abandon backward compatibility"?
+		  <ul>
+			<li>Deprecated tags would no longer work</li>
+			<li>All "old" code would have to be updated if you wanted to deliver XHTML</li>
+			<li>Browsers would have even more work to do when rendering pages</li>
+		  </ul>
+		</li>
+		<li>Some additional changes:
+    	  <ul>
+    		<li>Forms will now be controlled by XForms, a new system that allows for error checking, preformatted input fields and more</li>
+    		<li>DOM events will be replaced with XML Events - a system for registering and handling events within an XML document, requiring very strict coding standards</li>
+    		<li>Lists for Navigation can be created with a new <code>n1</code> tag</li>
+    		<li>Any element can have <code>href</code> or <code>src</code> attributes, allowing for links and/or image replacement</li>
+		  </ul>
+		</li>
+		<li>Some of the more contentious issues were split out into modules to be worked on by the W3C XHTML Working Group</li>
+		<li>At one point, a question was asked:
+		  <ul>
+			<li>Shouldn't we be taking into account the billions of pages that are already out there, make the upgrading part easy and focus on the kinds of things people are actually doing today?</li>
+		  </ul>
+		</li>
+		<li>Maybe not <em>exactly</em> that, but close</li>
+		<li>A vote was called and the motion was defeated.  But the people who thought it was a good idea wanted to move forward</li>
+		<li>As a result - they created the WHATWG (Web Hypertext Application Technology Working Group) and began working on a competing specification, which was originally called Web Applications 1.0</li>
+	  </ul>
+	  <h2>HTML5: Arising out of the Morass</h2>
+	  <ul>
+		<li>HTML was born out of frustration with languishing XHTML2 development</li>
+		<li>The last official spec of XHTML had come in 2000 and by 2005, there was little forward movement, with the development bogged down in committees and problems reaching consensus</li>
+		<li>There were two distinct camps: Strict and Non Strict (overly simplified terms)</li>
+		<li>After a series of decisions against a more forgiving, backward compatible version, a number of HTML Working Group members created their own group: WHATWG</li>
+		<li>After 3 years, Web Applications 1.0 gained considerable momentum when Mozilla, Apple and Opera joined the Working Group and requested that it become part of the W3C's HTML Working Group</li>
+		<li>In 2007, the W3C HTML working group adopted the development, renamed it HTML5 (a successor to HTML 4.01) and released a Public Working Draft in 2008</li>
+		<li>As of today, HTML5 is a <a href="http://www.whatwg.org/specs/web-apps/current-work/">Living Standard</a>, and <a href="http://blog.whatwg.org/html-is-the-new-html5">is now just called HTML</a></li>
+	  </ul>
+    </article>
+
+    <article id="html5">
+      <header>
+        <h1>HTML5</h1>
+      </header>
+	  <h2>The basics of HTML5</h2>
+	  <ul>
+		<li>Some of the most important parts of HTML5 are:
+		  <ul>
+    		<li>Backwards compatible - there will be an attempt to make the system compatible</li>
+    		<li>XML can be included as a markup language from within HTML5</li>
+    		<li>Ultra simple Doctype: &lt;!DOCTYPE html&gt;</li>
+    		<li>Ability to embed MathML or SVG elements</li>
+			<li>One of the guiding principles: Semantic Coding</li>
+		  </ul>
+		</li>
+		<li>Some of these seem insignificant, but they are great strides forward</li>
+		<li>More than just adjustments to the markup, there are new elements:
+		  <ul>
+    		<li><code>&lt;section&gt;</code> is a tag representing a document or application section</li>
+    		<li><code>&lt;article&gt;</code> is an independent piece of content in a document</li>
+    		<li><code>&lt;aside&gt;</code> is for content "only slightly" related to the content</li>
+    		<li><code>&lt;header/footer&gt;</code> these tags are for the header or footer on a page</li>
+    		<li><code>&lt;nav&gt;</code> represents an area for navigation</li>
+    		<li><code>&lt;dialog&gt;</code> allows you to mark up a conversation</li>
+    		<li><code>&lt;figure&gt;</code> allows for captioning of embedded content like a graphic or video</li>
+		  </ul>	
+		</li>
+		<li>These represent some big changes in HTML, allowing for more flexibility in coding and specifying content</li>
+		<li>There is a list of additional tags that will continue to refine what will be possible with HTML:
+		  <ul>
+    		<li><code>audio, video, embed, mark, meter, progress, time, canvas, command, datagrid, details, datalist, keygen, bb, output, ruby</code></li>
+    		<li><code>&lt;input &amp; type&gt;</code> elements will also have new attributes that allow for greater Form functionality:
+    		  <ul>
+    			<li><code>datetime, date, month, week, time, number, range, email, url, search, color</code></li>
+			  </ul>	
+    		</li>
+    		<li>There are a huge list of additional attributes that have changed, allowing for considerable agility with web development</li>
+    		<li>There have also been a few elements removed, such as: <code>&lt;big, font, strike, &gt; and a few more</code></li>
+    		<li>There are also a large number of attributes that have been removed, such as: <code>&lt;align, background, border, height, size, type, width&gt; and more</code></li>
+		  </ul>
+		</li>
+		<li>Some of the most anticipated additions are <code>&lt;canvas, audio, video&gt;</code></li>
+		<li>The <code>&lt;canvas&gt;</code> tag will allow for 2D drawing of considerable power</li>
+		<li><code>&lt;video/audio&gt;</code> will allow for direct embedding of elements in your HTML documents</li>
+		<li>There is some development in this area already</li>
+	  </ul>
+
+	  <h2>Is it time to start using HTML5?</h2>
+	  <ul>
+		<li>Yes and No</li>
+		<li>One of the great things about HTML5 is the ability to use tags from previous MLs</li>
+		<li>Tags are therefore interpreted and rendered correctly</li>
+		<li>How about <strong>new</strong> tags? (audio, video, article, aside, etc)</li>
+		<li>These may not be rendered correctly due to older, non-compliant browsers not having an idea how to interpret them</li>
+		<li>What happens when you use an unknown element... say: <code>&lt;finnegan&gt;My Dog&lt;finnegan&gt;</code>
+		  <ul>
+			<li>If the browser is Firefox, Chrome, Safari, Opera: inline style</li>
+			<li>If the browser is IE: no style at all, all child elements are treated as siblings instead(?!)</li>
+			<li>So, if you have an <code>&lt;article&gt;</code> tag, IE will strip everything out of it and create them as sibling elements. Awesome.</li>
+		  </ul>
+		</li>
+		<li>With the huge amount of IE out there, it might be problematic to start working with HTML5</li>
+		<li>However, there is a workaround and it is really easy:
+		  <ul>
+			<li><code>&lt;script&gt;document.createElement("article");&lt;/script&gt;</code></li>
+			<li>This creates an element called <code>&lt;article&gt;</code> which the browser (IE, in this case) can understand and style appropriately</li>
+		  </ul>
+		</li>
+		<li>Creating an entry for every element can get a bit heavy, so you can use the <a href="http://code.google.com/p/html5shiv/">HTML5shiv</a> script written by <a href="http://remysharp.com/">Remy Sharp</a>, an HTML5 guru.</li>
+		<li>Because HTML5 understands both HTML4 and XHTML tags, you can "use" HTML5 today</li>
+		<li>The major caveat behind doing that?<em> HTML5 is still not a valid specification.</em></li>
+	  </ul>
+	  <h2>More HTML5</h2>
+	  <ul>
+		<li>How much of HTML5 does your browser support? Try the <a href="http://html5test.com">HTML5Test</a></li>
+		<li>Take a moment and compare the different browsers on your system - or on your smartphone!</li>
+		<li>Some excellent books on the topic of HTML5:
+		  <ul>
+			<li><a href="http://books.alistapart.com/products/html5-for-web-designers">HTML5 for Web Developers by Jeremy Keith</a></li>
+			<li><a href="http://diveintohtml5.info/">Dive into HTML5 by Mark Pilgrim</a></li>
+			<li><a href="http://introducinghtml5.com/">Introducing HTML5 by Bruce Lawson and Remy Sharp</a></li>
+		  </ul>
+		</li>
+	  </ul>
+    </article>
+
+    <article id="assignment">
+      <header>
+        <h1>Assignment</h1>
+      </header>
+      <p>Consider the pages you created for the Finnegan and Realtor pages. Now go over some of the tags we discussed in reference to HTML5 and SEO principles, as well as the semantic discussion from last week.</p>
+	  <p>Make a copy of each page, leaving your XHTML homework from last week as your Week 1 assignment. Convert each copy to HTML5 pages as your week 2 homework.</p>
+    </article>
+  </section>
+
+  <footer></footer>
+</body>
+</html>

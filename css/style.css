@@ -267,3 +267,7 @@ article h1 {
   color: #707071;
   background-color: #EEE
 }
+
+code {
+	color: rgb(0, 102, 170);
+}
