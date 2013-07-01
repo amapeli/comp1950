@@ -187,6 +187,7 @@ nav {
   text-align: center;
   font-size: 1.5em;
   font-weight: 300;
+  z-index: 9999;
 }
 
 nav lu {
@@ -252,30 +253,65 @@ section {
 article {
 	background: #fff;
   color: #1c1c1c;
-  margin: 1em 0;
-  padding-left: 1em;
+  margin: 1em 0 2em 0;
+  padding: 0 0 1em 1em;
 }
 
 article header {
-	padding-left: -1em;
+  position: relative;
+  color: #707071;
+  left: -1em;
 }
 
 article h1 {
 	font-size: 1.5em;
-  font-weight: 300;
-  color: #707071;
-  background-color: #EEE
+  font-weight: 700;
+  background-color: #EEE;
+  padding-bottom: .5em;
+}
+
+article h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 1.5em 0;
+}
+
+article ul {
+  margin: 1em 0;
+}
+
+article li {
+  list-style: none;
+  border-left: 2px solid #4cd2d9;
+  padding-left: 7px;
+}
+
+article ul ul{
+  padding-left: 7px;
+}
+
+article a {
+  color: #4cd2d9;
 }
 
 code {
 	color: rgb(0, 102, 170);
 }
 
+dt {
+  font-weight: 700;
+  margin: 1em 0 0 0;
+}
+
+dd {
+  margin: 0 0 0 1em;
+}
+
 .logo {
   margin-right: 4em;
   opacity: .7;
   transition: opacity .5s ease-in-out;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .logo:hover {
@@ -287,4 +323,8 @@ code {
 .menu-subtitle {
   display: block;
   font-size: .7em;
+}
+
+.item-pseudo {
+  border-left: none;
 }
