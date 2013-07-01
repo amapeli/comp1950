@@ -179,8 +179,10 @@ ol  > li{
 /* HOME PAGE */
 
 nav {
+  position: fixed;
   background: #363636;
   width: 100%;
+  height: 30px;
   margin: 0 auto;
   padding: 1em 0;
   text-align: center;
@@ -217,6 +219,7 @@ section > header {
 }
 
 header .title-block {
+  padding-top: 78px;
   margin: 0;
 	width: 100%;
   background: #5adae2;
