@@ -256,19 +256,10 @@ article {
 	background: #fff;
   color: #1c1c1c;
   margin: 1em 0 2em 0;
-  padding: 0 0 1em 1em;
-}
-
-article:before {
-  background: #EEE;
-  position: relative;
-  left: 0;
-  top: 0;
-  height: 2em;
+  padding-bottom: 1em;
 }
 
 article header {
-  position: relative;
   color: #707071;
 }
 
@@ -276,13 +267,15 @@ article h1 {
 	font-size: 1.5em;
   font-weight: 700;
   background-color: #EEE;
-  padding-bottom: .5em;
+  margin: 0;
+  padding: .2em 0 0 .5em;
 }
 
 article h2 {
   font-size: 1.2em;
   font-weight: 500;
   margin: 1.5em 0;
+  padding: 0 0 .2em .6em;
 }
 
 article ul {
