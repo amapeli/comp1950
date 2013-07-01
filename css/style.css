@@ -374,6 +374,8 @@ dd {
 }
 
 body > footer {
+  position: fixed;
+  bottom: 0;
   background: #363636;
   width: 100%;
   margin: 0 auto;
