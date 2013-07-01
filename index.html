@@ -1,47 +1,16 @@
-<!DOCTYPE html5>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
 		<title>Welcome to SKARK</title>
-		<link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
-		<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
-		<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-		<script>
-		<!-- Functionality for sliding panels
-			$(document).ready(function() {
-				// resize the .item div to the viewport width/height
-				height = $(window).height();
-	
-				$('.item').css({height: height});
-				
-				$('a.toggle').click(function () {
-					// when toggle is clicked, slide to the link element's position
-					$('a.toggle').removeClass('selected');
-					$(this).addClass('selected');
-					current = $(this);
-					$('#wrapper').scrollTo($(this).attr('href'), 800);		
-		
-					return false;
-				});
-	
-				$(window).resize(function () {
-					resizePanel();
-				});
-			});
 
-			function resizePanel() {
-				// resize the .item div to the viewport width/height
-				height = $(window).height();
-	
-				$('.item').css({height: height});
-	
-				// goto the proper selected div
-				$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
-			}
-		//-->
-		</script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+		
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/script.js"></script>
 	</head>
 	<body>
-		<div id="wrapper">
+		<div id="full-wrapper">
 			<div id="blurb" class="item">
 				<!-- Insert page 1 content here -->
 				<div class="content">
@@ -51,16 +20,17 @@
 					<p>Our group consists of 5 people.</p>
 					</h1>
 
-<h2>Meet the team!</h2>
+					<h2>Meet the team!</h2>
 				</div>
 				
 				<!-- toggle button to slide up -->
-				<div class="button" id="teamLink">
+				<div class="button-fixed" id="teamLink">
 					<a href="#team" class="toggle"><img src="img/button1.png"></a>
 				</div>
 			</div>
 			
 			<div id="team" class="item">
+				<a name='next'></a>
 				<!-- Insert page 2 content here -->
 				<div class="content">
 					<img src="img/mng.png">
@@ -68,50 +38,50 @@
 					<div id="figures">
 
 					<figure>
-					<img src="img/slav.jpg">
-					<figcaption>
-					<p><strong>Viacheslav Ivanov</strong></p>
-					<p>qa engineer, web/mobile developer & that guy with moustache</p>
-					</figcaption>
+						<img src="img/slav.jpg">
+						<figcaption>
+							<p><strong>Viacheslav Ivanov</strong></p>
+							<p>coding for food</p>
+						</figcaption>
 					</figure>
 
 					<figure>
-					<img src="img/kevin.jpg">
-					<figcaption>
-					<p><strong>Kevin Wilde</strong></p>
-					<p>web developer</p>
-					</figcaption>
+						<img src="img/kevin.jpg">
+						<figcaption>
+							<p><strong>Kevin Wilde</strong></p>
+							<p>web developer</p>
+						</figcaption>
 					</figure>
 
 					<figure>
-					<img src="img/richard.jpg">
-					<figcaption>
-					<p><strong>Richard Chang</strong></p>
-					<p>web developer/.NET software developer</p>
-					</figcaption>
+						<img src="img/richard.jpg">
+						<figcaption>
+							<p><strong>Richard Chang</strong></p>
+							<p>web developer/.NET software developer</p>
+						</figcaption>
 					</figure>
 
 					<figure>
-					<img src="img/kim.jpg">
-					<figcaption>
-					<p><strong>Kim Mackay</strong></p>
-					<p>web developer</p>
-					</figcaption>
+						<img src="img/kim.jpg">
+						<figcaption>
+							<p><strong>Kim Mackay</strong></p>
+							<p>web developer</p>
+						</figcaption>
 					</figure>
 
 					<figure>
-					<img src="img/amber.jpg">
-					<figcaption>
-					<p><strong>Amber Terry</strong></p>
-					<p>web developer, blogger.</p>
-					</figcaption>
-					</figure>
-					<br class="clear"/>
+						<img src="img/amber.jpg">
+						<figcaption>
+							<p><strong>Amber Terry</strong></p>
+							<p>web developer, blogger.</p>
+						</figcaption>
+						</figure>
+						<br class="clear"/>
 					</div>
 				</div>
 				
 				<!-- toggle button to slide up -->
-				<div class="button" id="projectLink">
+				<div class="button-fixed" id="projectLink">
 					<a href="#project" class="toggle"><img src="img/button2.png"></a>
 				</div>
 			</div>
@@ -119,40 +89,40 @@
 			<div id="project" class="item">
 				<!-- Insert page 3 content here -->
 				<div class="content">
-<h1>The aim of this project is to redesign the current COMP 1950 with the following parameters...</h1>
+					<h1>The aim of this project is to redesign the current COMP 1950 with the following parameters...</h1>
 
-<ol>
-<li>To improve access to information on the website (as per students and owners recommendations):</li>
-	<ul>
-	<li>Assignment, exercises all in one easy place</li>
-	<li>Easy access to examples, references.</li>
-	<li>There is an area for latest news/updates/changes etc.</li>
-	<li>The lecture pages have lists of all subjects and a direct link to the information ie SEO Optimization, media queries.  This will reduce time searching for certain subjects.</li>
-	</ul>
+					<ol>
+					<li>To improve access to information on the website (as per students and owners recommendations):</li>
+						<ul>
+						<li>Assignment, exercises all in one easy place</li>
+						<li>Easy access to examples, references.</li>
+						<li>There is an area for latest news/updates/changes etc.</li>
+						<li>The lecture pages have lists of all subjects and a direct link to the information ie SEO Optimization, media queries.  This will reduce time searching for certain subjects.</li>
+						</ul>
 
-<li>Improve the layout style, with techniques learnt within the course:</li>
-	<ul>
-	<li>Different media queries.</li>
-	<li>HTML5 coding.</li>
-	<li>Different style sheets.</li>
-	<li>Responsive Web design.</li>
-	<li>Different style sheets imported into the CSS.</li>
-	<li>CSS Descendant, Child and Attribute Selectors.</li>
-	<li>Server Side includes.</li>
-	<li>Tumblr blog.</li>
-	<li>This design is to look modern, sleek and easy to navigate.</li>
-	</ul>
-	
-<li>The function of the website is to complement the teachings within the class:</li>
-	<ul>
-	<li>As this website is targeting current students, it is in the best interest of the lecturer time and resources to NOT concentrate on Alumni access and students, as the content is very closely related to the teachings, and may be taken out of context.  Having an alumni page, will increase the work for the tutor and would need to be constantly updated.</li>  
-	<li>The lecture notes in week order and in-class chronology.  The lecture is to be downloaded separately each week.</li>
-	</ul>
-</ol>
+					<li>Improve the layout style, with techniques learnt within the course:</li>
+						<ul>
+						<li>Different media queries.</li>
+						<li>HTML5 coding.</li>
+						<li>Different style sheets.</li>
+						<li>Responsive Web design.</li>
+						<li>Different style sheets imported into the CSS.</li>
+						<li>CSS Descendant, Child and Attribute Selectors.</li>
+						<li>Server Side includes.</li>
+						<li>Tumblr blog.</li>
+						<li>This design is to look modern, sleek and easy to navigate.</li>
+						</ul>
+						
+					<li>The function of the website is to complement the teachings within the class:</li>
+						<ul>
+						<li>As this website is targeting current students, it is in the best interest of the lecturer time and resources to NOT concentrate on Alumni access and students, as the content is very closely related to the teachings, and may be taken out of context.  Having an alumni page, will increase the work for the tutor and would need to be constantly updated.</li>  
+						<li>The lecture notes in week order and in-class chronology.  The lecture is to be downloaded separately each week.</li>
+						</ul>
+					</ol>
 				</div>
 				
 				<!-- toggle button to slide up -->
-				<div class="button" id="visitLink">
+				<div class="button-fixed" id="visitLink">
 					<a href="#visit" class="toggle"><img src="img/button3.png"></a>
 				</div>
 			</div>
@@ -160,11 +130,10 @@
 			<div id="visit" class="item">
 				<!-- Insert page 4 content here -->
 				<div class="content">
-<h1>Check out the website!</h1>
+					<h1>Check out the website!</h1>
 
-<p id="bluebutton"><a href="home.html">Visit the Site ></a></p>
-
-<p id="graybutton"><a href="sitemap.html">View Site Map ></a></p>
+					<a class="button button-blue" href="home.html">Visit the Site ></a>
+					<a class="button button-gray" href="sitemap.html">Site Map ></a>
 				</div>
 			</div>
 			
